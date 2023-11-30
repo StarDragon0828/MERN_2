@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
+@import '../node_modules/bootstrap/scss/bootstrap.scss';
+
+:root {
+  --body-bg-color: #e5ecef;
+  --theme-bg-color: #fafafb;
+  --body-font: "Poppins", sans-serif;
+  --body-color: #1A1110;
+  --active-color: #12d76c;
+  --active-light-color: #e1ebfb;
+  --header-bg-color: #fff;
+  --search-border-color: #efefef;
+  --border-color: #d8d8d8;
+  --alert-bg-color: #e8f2ff;
+  --subtitle-color: #83838e;
+  --inactive-color: #f0f0f0;
+  --placeholder-color: #9b9ba5;
+  --time-button: #fc5757;
+  --level-button: #5052d5;
+  --button-color: #12d76c;
+}
+
+body{
+  font-family: var(--body-font);
+}
+
+button.btn-primary{
+  background-color: var(--active-color) !important;
+  border-color: var(--active-color) !important;
+  font-weight: bold;
+  transition: all ease-in .3s !important;
+  &:hover{
+    background-color: var(--active-light-color) !important;
+    color: var(--active-color) !important;
+    transition: all ease-out .3s !important;
+  }
+}
+
+.auth-page-wrapper.login{
+  background: url('../public/images/login-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  opacity: .8;
+  .login-card-bg-fill{
+    background-color: var(--body-color);
+  }
+  .login-logo{
+    width: 100%;
+    height: auto;
+  }  
+}
+
+
+.auth-page-wrapper{
+  .auth-page-content {
+  padding-bottom: 60px;
+  position: relative;
+  z-index: 2;
+  width: 100%
+  }
+}
