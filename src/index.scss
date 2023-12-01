@@ -1,12 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
-@import '../node_modules/bootstrap/scss/bootstrap.scss';
-@import '../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
 :root {
   --body-bg-color: #e5ecef;
   --theme-bg-color: #fafafb;
   --body-font: "Poppins", sans-serif;
-  --body-color: #1A1110;
+  --body-color: #1a1110;
   --active-color: #12d76c;
   --active-light-color: #e1ebfb;
   --header-bg-color: #fff;
@@ -21,51 +21,50 @@
   --button-color: #12d76c;
 }
 
-body{
+body {
   font-family: var(--body-font);
 }
 
-button.btn-primary{
+button.btn-primary {
   background-color: var(--active-color) !important;
   border-color: var(--active-color) !important;
   font-weight: bold;
-  transition: all ease-in .3s !important;
-  &:hover{
+  transition: all ease-in 0.3s !important;
+  &:hover {
     background-color: var(--active-light-color) !important;
     color: var(--active-color) !important;
-    transition: all ease-out .3s !important;
+    transition: all ease-out 0.3s !important;
   }
 }
 
-.btn-outline-primary{
+.btn-outline-primary {
   border-color: var(--active-color) !important;
   color: var(--active-color) !important;
-  &:hover{
+  &:hover {
     background-color: transparent !important;
   }
 }
 
-.auth-page-wrapper.login{
-  background: url('../public/images/login-bg.jpg');
+.auth-page-wrapper.login {
+  background: url("../public/images/login-bg.jpg");
   background-position: center center;
   background-size: cover;
-  opacity: .8;
-  .login-card-bg-fill{
+  opacity: 0.8;
+  .login-card-bg-fill {
     background-color: var(--body-color);
   }
-  .login-logo{
+  .login-logo {
     width: 100%;
     height: auto;
-  }  
+  }
 }
 
-
-.auth-page-wrapper{
+.auth-page-wrapper {
   .auth-page-content {
-  padding-bottom: 60px;
-  position: relative;
-  z-index: 2;
-  width: 100%
+    padding-bottom: 60px;
+    position: relative;
+    z-index: 2;
+    width: 100%;
   }
 }
 
@@ -75,12 +74,11 @@ button.btn-primary{
   overflow-x: hidden;
 }
 
-
 #sidebar-wrapper {
   min-height: 100vh;
   margin-left: -15rem;
   background: var(--body-color);
-  opacity: .9;
+  opacity: 0.9;
   transition: margin 0.25s ease-out;
 }
 
@@ -97,11 +95,16 @@ button.btn-primary{
 
 #page-content-wrapper {
   min-width: 100vw;
-  background-image: linear-gradient(to left, rgba(255, 255, 255, .7), rgba(255, 255, 255, .7)),url(../public/images/page-wrapper-background.jpg);
+  background-image: linear-gradient(
+      to left,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url(../public/images/page-wrapper-background.jpg);
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
-  opacity: .7;
+  opacity: 0.7;
 }
 
 body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
@@ -122,24 +125,23 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   padding: 13px 30px !important;
   border-radius: 20px !important;
   color: #fff;
-  transition: ease-out .3s;
-  &:hover{
+  transition: ease-out 0.3s;
+  &:hover {
     background-color: var(--active-color);
     color: #fff;
-    transition: ease-in .3s;
+    transition: ease-in 0.3s;
   }
-  &.active{
+  &.active {
     background-color: var(--active-color) !important;
     color: #fff !important;
     box-shadow: 1px 1px 10px var(--active-color);
-    transition: ease-in .3s !important;
+    transition: ease-in 0.3s !important;
   }
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   display: none !important;
 }
-
 
 @media (min-width: 768px) {
   #sidebar-wrapper {

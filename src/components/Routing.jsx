@@ -4,7 +4,7 @@ import Context from "./Context";
 import Layouts from "./Layouts";
 import Login from "../modules/Auth/Login";
 import Dashboard from "../modules/Dashboard/Dashboard";
-
+import Anúncios from "../modules/Anúncios/Anúncios";
 const Routing = () => {
 
     const [context, setContext] = useState('');
@@ -28,7 +28,7 @@ const Routing = () => {
                         {context && context.auth ? 
                             <Route>
                                 <Route caseSensitive={false} path="/dashboard" element={<Dashboard />} />
-                                <Route caseSensitive={false} path="/empresas" element={<Dashboard />} />
+                                <Route caseSensitive={false} path="/empresas" element={<Anúncios />} />
                             </Route>
                         :
                             <Route caseSensitive={false} path="/" element={<Login />} />
