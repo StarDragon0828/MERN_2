@@ -20,7 +20,7 @@ const Anuncios = () => {
       <div className="card-datatable">
         <div className="dataTables_wrapper dt-bootstrap5">
           <div className="card-header flex-column flex-md-row d-flex justify-content-between align-items-center">
-            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-4 mt-4">
+            <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 mt-4">
               <div className="input-group input-group-sm">
                 <input
                   type="text"
@@ -28,17 +28,16 @@ const Anuncios = () => {
                   // placeholder="Search"
                   aria-label="Search"
                   aria-describedby="basic-addon2"
-                  style={{ paddingRight: "40px" }}
                 />
                 &nbsp;
-                <div className="input-group-append">
-                  <span className="input-group-text" id="basic-addon2">
+                <div className="input-group-append custom-input-group">
+                  <span className="input-group-text custom-input-group" id="basic-addon2">
                     <FaSearch />
                   </span>
                 </div>
                 &nbsp;
-                <div className="input-group-append">
-                  <span className="input-group-text" id="basic-addon2">
+                <div className="input-group-append custom-input-group">
+                  <span className="input-group-text custom-input-group" id="basic-addon2">
                     <RiEqualizerFill />
                   </span>
                 </div>
