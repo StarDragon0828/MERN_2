@@ -1,8 +1,8 @@
 export const InputField = (props) => {
     return (
         <>
-            <div className="mb-3">
-                <input type={props.type} className="form-control py-3" name={props.name} id={props.name} placeholder={props.title} required={props.required} />
+            <div className={props.size ? props.size : 'col-12 my-2'}>
+                <input type={props.type} className="form-control py-3" name={props.name} id={props.name} placeholder={props.title} required={props.required} {...props} />
             </div>
         </>
     )

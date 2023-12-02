@@ -14,7 +14,7 @@ const Login = () => {
             ...prevstate,
             auth: {login: true}
         }))
-        navigate('/dashboard')
+        navigate('/')
     }
     return (
         <>
