@@ -70,6 +70,51 @@ button.btn-primary {
 
 // Dashboard Css
 
+.table{
+  border-collapse: separate;
+  border-spacing: 0 1em;
+  td{
+    border-top: 1px solid #ccc;
+    &:first-child{
+      border-left: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+    }
+    &:last-child{
+      border-right: 1px solid #ccc;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+
+/* Scroll bar stylings */
+::-webkit-scrollbar {
+  width: 15px;
+  height: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #ddd;
+  border-radius: 7px; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
+  border: 1px solid #888;
+  border-radius: 7px;
+  box-shadow: 1px 1px 10px #ddd;
+  transition: ease-out .3s;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ccc; 
+  transition: ease-in .3s;
+}
+
+
 #wrapper {
   overflow-x: hidden;
 }
@@ -79,6 +124,14 @@ button.btn-primary {
   margin-left: -15rem;
   background: var(--body-color);
   opacity: 0.9;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: auto;
+  z-index: 12;
   transition: margin 0.25s ease-out;
 }
 
@@ -105,10 +158,18 @@ button.btn-primary {
   background-position: center center;
   background-repeat: no-repeat;
   opacity: 0.7;
+  box-sizing: border-box;
+  min-height: 100vh;
+  padding: 20px 10px 20px 250px;
+  transition: .3s;
 }
 
 body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   margin-left: 0;
+}
+
+body.sb-sidenav-toggled #page-content-wrapper{
+  padding-left: 0 !important;
 }
 
 .navbar-expand-lg {
@@ -143,6 +204,15 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
   display: none !important;
 }
 
+.card-table-view{
+  max-height: 85dvh;
+  
+  position: relative;
+  .card-body{
+    overflow-y: auto;
+  }
+}
+
 @media (min-width: 768px) {
   #sidebar-wrapper {
     margin-left: 0;
@@ -155,3 +225,13 @@ body.sb-sidenav-toggled #wrapper #sidebar-wrapper {
     margin-left: -15rem;
   }
 }
+
+@media (max-width: 767px) {
+  #page-content-wrapper{
+    padding-left: 0;
+  }
+  body.sb-sidenav-toggled #page-content-wrapper{
+    padding-left: 250px;
+  }
+}
+

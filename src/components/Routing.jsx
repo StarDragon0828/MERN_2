@@ -5,13 +5,13 @@ import Layouts from "./Layouts";
 import Login from "../modules/Auth/Login";
 import Dashboard from "../modules/Dashboard/Dashboard";
 import Anúncios from "../modules/Anúncios/Anúncios";
+import Empresas from "../modules/Empresas/Empresas";
 const Routing = () => {
 
     const [context, setContext] = useState('');
     let token = localStorage.getItem('dashboard-token');
 
     useEffect(() => {
-        console.log(token);
         if(token){
             setContext(prevstate => ({
                 ...prevstate,
@@ -27,8 +27,9 @@ const Routing = () => {
                     <Route caseSensitive={false} path="" element={<Layouts />}>
                         {context && context.auth ? 
                             <Route>
-                                <Route caseSensitive={false} path="/dashboard" element={<Dashboard />} />
-                                <Route caseSensitive={false} path="/empresas" element={<Anúncios />} />
+                                <Route caseSensitive={false} path="/" element={<Dashboard />} />
+                                <Route caseSensitive={false} path="/empresas" element={<Empresas />} />
+                                <Route caseSensitive={false} path="/anuncios" element={<Anúncios />} />
                             </Route>
                         :
                             <Route caseSensitive={false} path="/" element={<Login />} />

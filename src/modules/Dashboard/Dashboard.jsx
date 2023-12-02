@@ -1,4 +1,17 @@
+import { useContext, useEffect } from "react";
+import Context from "../../components/Context";
+
 const Dashboard = () => {
+
+    const [context, setContext] = useContext(Context)
+
+    useEffect(() => {
+        setContext(prevState => ({
+            ...prevState,
+            pageTitle: "Pagina Inicial"
+        }))
+    }, [])
+
     return (
         <>
             <div className="container-fluid">
