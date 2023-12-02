@@ -48,7 +48,7 @@ const Anuncios = () => {
             </div>
           </div>
           <div className="table-responsive">
-            <table id="data-table-basic" className="table table-striped">
+            <table id="data-table-basic" className="table">
               <thead>
                 <tr>
                   {tableHeaders.map((header, index) => (
