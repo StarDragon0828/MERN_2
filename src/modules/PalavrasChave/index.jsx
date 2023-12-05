@@ -73,14 +73,14 @@ const ItemGroup = () => {
 
 const PalavrasChave = () => {
 
-    const [arr, setArr] = useState([]);
+    const [section, setSection] = useState([]);
 
     const handleSectionAdd = () => {
-        setArr(arr.concat(<ItemGroup />))
+        setSection(section.concat(<ItemGroup />))
     }
 
     useEffect(() => {
-      setArr(arr.concat(<ItemGroup />))
+      setSection(section.concat(<ItemGroup />))
     }, [])
     
 
@@ -99,7 +99,7 @@ const PalavrasChave = () => {
                         </div>
                         <div className="middle-section d-flex">
                             <div className="col-xs-12 col-sm-12 col-md-8 col-lg-8 mt-4">
-                                {arr}
+                                {section}
                                 <div className="d-flex justify-content-center align-items-center p-3">
                                     <button type="button" className="btn" onClick={() => handleSectionAdd()}><i className="bi bi-plus me-2"></i> Adicionar outro grupo</button>
                                 </div>
