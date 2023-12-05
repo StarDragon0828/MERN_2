@@ -29,6 +29,13 @@ const Asidebar = () => {
           >
             <i className="bi bi-megaphone me-2"></i> Anuncios
           </NavLink>
+          <NavLink
+            className="list-group-item list-group-item-action list-group-item-light p-3 d-flex justify-content-center"
+            activeClassName="selected"
+            to="/palavras-chave"
+          >
+            <i className="bi bi-hash me-2"></i> PaLavras Chave
+          </NavLink>
         </div>
       </div>
     </>
