@@ -6,6 +6,7 @@ import Login from "../modules/Auth/Login";
 import Dashboard from "../modules/Dashboard/Dashboard";
 import Empresas from "../modules/Empresas/Empresas";
 import Anuncios from "../modules/Anuncios/Anuncios";
+import PalavrasChave from "../modules/PalavrasChave"
 const Routing = () => {
   const [context, setContext] = useState("");
   let token = localStorage.getItem("dashboard-token");
@@ -41,6 +42,11 @@ const Routing = () => {
                   caseSensitive={false}
                   path="/anuncios"
                   element={<Anuncios />}
+                />
+                <Route
+                  caseSensitive={false}
+                  path="/palavras-chave"
+                  element={<PalavrasChave />}
                 />
               </Route>
             ) : (
