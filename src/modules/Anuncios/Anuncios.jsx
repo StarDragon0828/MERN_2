@@ -1,10 +1,13 @@
-import React from "react";
-import AnúnciosData from "./Anúncios.json";
-import { HiDotsVertical } from "react-icons/hi";
+import React, { useContext, useEffect } from "react";
 import { FaSearch } from "react-icons/fa";
+import { HiDotsVertical } from "react-icons/hi";
 import { RiEqualizerFill } from "react-icons/ri";
+import Context from "../../components/Context";
+import AnúnciosData from "./Anúncios.json";
 
 const Anuncios = () => {
+  const [context, setContext] = useContext(Context)
+  
   const tableHeaders = [
     "name",
     "position",
@@ -14,6 +17,13 @@ const Anuncios = () => {
     "salary",
     "",
   ];
+
+  useEffect(() => {
+    setContext(prevState => ({
+        ...prevState,
+        pageTitle: "Anúncios"
+    }))
+}, [])
 
   return (
     <div className="card mt-3">
